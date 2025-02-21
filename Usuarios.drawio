@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="yV6xMslNSq-nfX0k8III-1" value="Usuarios" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="140" y="660" width="160" height="206" as="geometry" />
+          <mxGeometry x="230" y="520" width="160" height="206" as="geometry" />
         </mxCell>
         <mxCell id="yV6xMslNSq-nfX0k8III-2" value="id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="yV6xMslNSq-nfX0k8III-1">
           <mxGeometry y="26" width="160" height="30" as="geometry" />
@@ -26,7 +26,7 @@
           <mxGeometry y="176" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yV6xMslNSq-nfX0k8III-5" value="Endereco" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="320" y="800" width="160" height="236" as="geometry" />
+          <mxGeometry x="230" y="730" width="160" height="266" as="geometry" />
         </mxCell>
         <mxCell id="yV6xMslNSq-nfX0k8III-6" value="id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="yV6xMslNSq-nfX0k8III-5">
           <mxGeometry y="26" width="160" height="30" as="geometry" />
@@ -46,11 +46,14 @@
         <mxCell id="yV6xMslNSq-nfX0k8III-16" value="Estado" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="yV6xMslNSq-nfX0k8III-5">
           <mxGeometry y="176" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yV6xMslNSq-nfX0k8III-8" value="CEP" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="yV6xMslNSq-nfX0k8III-5">
+        <mxCell id="yV6xMslNSq-nfX0k8III-32" value="CEP" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="yV6xMslNSq-nfX0k8III-5">
           <mxGeometry y="206" width="160" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="yV6xMslNSq-nfX0k8III-8" value="TipoEndereco" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="yV6xMslNSq-nfX0k8III-5">
+          <mxGeometry y="236" width="160" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="yV6xMslNSq-nfX0k8III-9" value="List" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="540" y="650" width="160" height="176" as="geometry" />
+          <mxGeometry x="540" y="520" width="160" height="176" as="geometry" />
         </mxCell>
         <mxCell id="yV6xMslNSq-nfX0k8III-10" value="id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="yV6xMslNSq-nfX0k8III-9">
           <mxGeometry y="26" width="160" height="30" as="geometry" />
@@ -66,6 +69,15 @@
         </mxCell>
         <mxCell id="yV6xMslNSq-nfX0k8III-12" value="Saldo" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="yV6xMslNSq-nfX0k8III-9">
           <mxGeometry y="146" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yV6xMslNSq-nfX0k8III-22" value="Tipo_Endereco" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="540" y="726" width="160" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="yV6xMslNSq-nfX0k8III-29" value="id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="yV6xMslNSq-nfX0k8III-22">
+          <mxGeometry y="26" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yV6xMslNSq-nfX0k8III-31" value="Tipo" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="yV6xMslNSq-nfX0k8III-22">
+          <mxGeometry y="56" width="160" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
