@@ -118,6 +118,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'projeto-cloud-ibmec'
+          app-name: 'bigdata-ecommerce'
           slot-name: 'Production'
           package: '*.jar'
