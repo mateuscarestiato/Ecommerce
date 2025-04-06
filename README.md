@@ -18,6 +18,8 @@ Este documento descreve os endpoints disponíveis na API do projeto Ecommerce, i
   "saldo": 1000.00
 }
 
+## **Endereço (EnderecoController)**
+
 ### **Criar Endereço**
 - **Endpoint:** `POST /address/{id_user}`
 - **Descrição:** Cria um endereço para o usuário especificado.
@@ -32,6 +34,8 @@ Este documento descreve os endpoints disponíveis na API do projeto Ecommerce, i
   "cep": "01000-000"
 }
 
+## **Procuto (ProductController)**
+
 ### **Criar Produto**
 - **Endpoint:** `POST /products`
 - **Descrição:** Cria um novo produto.
@@ -44,6 +48,8 @@ Este documento descreve os endpoints disponíveis na API do projeto Ecommerce, i
   "imageUrl": ["https://example.com/image1.jpg", "https://example.com/image2.jpg"],
   "productDescription": "Um smartphone de última geração."
 }
+
+## **Usuario (UsuarioController)**
 
 ### **Listar Todos os Usuários**
 - **Endpoint:** `GET /users`
