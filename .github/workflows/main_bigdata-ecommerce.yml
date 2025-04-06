@@ -121,3 +121,4 @@ jobs:
           app-name: 'bigdata-ecommerce'
           slot-name: 'Production'
           package: '*.jar'
+          startupCommand: 'java -jar /home/site/wwwroot/app.jar --server.port=8081'
