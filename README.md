@@ -2,7 +2,6 @@
 
 Este documento descreve os endpoints disponíveis na API do projeto Ecommerce, incluindo exemplos de requisições para serem testados no Postman.
 
----
 
 ## **Cartão de Crédito (CartaoController)**
 
@@ -17,6 +16,7 @@ Este documento descreve os endpoints disponíveis na API do projeto Ecommerce, i
   "cvv": "123",
   "saldo": 1000.00
 }
+```
 
 ## **Endereço (EnderecoController)**
 
@@ -33,6 +33,7 @@ Este documento descreve os endpoints disponíveis na API do projeto Ecommerce, i
   "estado": "SP",
   "cep": "01000-000"
 }
+```
 
 ## **Procuto (ProductController)**
 
@@ -48,6 +49,7 @@ Este documento descreve os endpoints disponíveis na API do projeto Ecommerce, i
   "imageUrl": ["https://example.com/image1.jpg", "https://example.com/image2.jpg"],
   "productDescription": "Um smartphone de última geração."
 }
+```
 
 ## **Usuario (UsuarioController)**
 
@@ -73,4 +75,5 @@ Este documento descreve os endpoints disponíveis na API do projeto Ecommerce, i
     "cpf": "98765432100",
     "telefone": "21988888888"
   }
-] 
+]
+```
