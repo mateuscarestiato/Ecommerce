@@ -27,7 +27,6 @@ public class Usuario {
     private String email;
 
     @Column
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime dtNascimento;
 
     @Column
