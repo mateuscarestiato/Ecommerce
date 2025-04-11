@@ -11,9 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read #This is required for actions/checkout
+    env:
+      DB_USERNAME: ${{ secrets.DB_USERNAME }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      COSMOS_KEY: ${{ secrets.COSMOS_KEY }}
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Verificar chaves sensíveis
+        run: |
+          echo "Verificando DB_USERNAME: ${DB_USERNAME:+OK}"
+          echo "Verificando DB_PASSWORD: ${DB_PASSWORD:+OK}"
+          echo "Verificando COSMOS_KEY: ${COSMOS_KEY:+OK}"
 
       - name: Set up Java version
         uses: actions/setup-java@v4
