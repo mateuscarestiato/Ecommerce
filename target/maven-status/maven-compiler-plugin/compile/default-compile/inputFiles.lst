@@ -1,0 +1,17 @@
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\configuration\CosmosConfiguration.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\configuration\CosmosProperties.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\controller\CartaoController.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\controller\EnderecoController.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\controller\ProductController.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\controller\UsuarioController.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\EcommerceCloudApplication.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\model\Cartao.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\model\Endereco.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\model\Product.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\model\Usuario.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\repository\CartaoRepository.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\repository\cosmos\ProductRepository.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\repository\EnderecoRepository.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\repository\UsuarioRepository.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\request\TransacaoRequest.java
+C:\Users\breen\Ecommerce\src\main\java\br\edu\ibmec\cloud\ecommerce_cloud\request\TransacaoResponse.java
