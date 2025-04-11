@@ -7,6 +7,17 @@ Projeto de e-commerce desenvolvido para a disciplina de Big Data e Cloud Computi
 - **Ian Esteves**  
 - **Brenda Mendes**
 
+## Objetivos do Projeto
+
+O objetivo principal do IBMEC-MALL é desenvolver uma aplicação de e-commerce moderna, escalável e baseada em nuvem que permita:
+
+- A compra de produtos por usuários com cartão de crédito validado e saldo controlado.
+- A administração de produtos e usuários por meio de uma API RESTful.
+- O armazenamento eficiente de dados utilizando bancos relacionais e não relacionais.
+- A automação de deploy e testes para garantir confiabilidade e agilidade no desenvolvimento.
+- A geração de relatórios de vendas com integração a um pipeline simplificado de Big Data.
+- A criação de um ambiente completo que simula um sistema de vendas real, com funcionalidades completas de cadastro, compra e análise de dados.
+
 ## Tecnologias Utilizadas
 - Java 21
 - Spring Boot 3
