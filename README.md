@@ -14,6 +14,7 @@ Projeto de e-commerce desenvolvido para a disciplina de Big Data e Cloud Computi
 - Deploy em Azure App Service
 - Swagger UI para testes
 
+
 ## Principais Endpoints
 
 ### Usuários
@@ -26,11 +27,13 @@ Projeto de e-commerce desenvolvido para a disciplina de Big Data e Cloud Computi
   "cpf": "12345678900",
   "telefone": "21997537491"
 }
+```
 
-Produtos
+---
 
-POST /products – Cadastro de produto
-
+### Produtos
+`POST /products` – Cadastro de produto  
+```json
 {
   "productCategory": "Videogames",
   "productName": "PlayStation 5",
@@ -40,31 +43,36 @@ POST /products – Cadastro de produto
   ],
   "productDescription": "Console Game"
 }
+```
 
-Cartão de Crédito
+---
 
-POST /credit_card/{id_user} – Cadastro de cartão
-
+### Cartão de Crédito
+`POST /credit_card/{id_user}` – Cadastro de cartão  
+```json
 {
   "numero": "4000123456789010",
   "dtExpiracao": "2027-04-11T03:02:45.999Z",
   "cvv": "123",
   "saldo": 5000
 }
+```
 
-POST /credit_card/{id_user}/authorize – Autorização de valor
-
+`POST /credit_card/{id_user}/authorize` – Autorização de valor  
+```json
 {
   "numero": "4000123456789010",
   "dtExpiracao": "2027-04-11T03:09:43.421Z",
   "cvv": "123",
   "valor": 2000
 }
+```
 
-Endereço
+---
 
-POST /address/{id_user} – Cadastro de endereço
-
+### Endereço
+`POST /address/{id_user}` – Cadastro de endereço  
+```json
 {
   "logradouro": "Rua Monteiro Lobato 21",
   "complemento": "701",
@@ -73,22 +81,28 @@ POST /address/{id_user} – Cadastro de endereço
   "estado": "Rio de Janeiro",
   "cep": "22030-100"
 }
+```
 
-Execução do Projeto
+---
 
-1. Clone o repositório
+## Execução do Projeto
 
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/mateuscarestiato/Ecommerce.git
+   ```
 
-2. Configure o application.properties com os dados do banco
+2. Configure o arquivo `application.properties` com os dados de conexão do banco.
 
+3. Execute o projeto com Maven:
+   ```bash
+   mvn spring-boot:run
+   ```
 
-3. Execute com Maven:
+4. Acesse a API através do Swagger UI:
+   ```
+   http://localhost:8081/swagger-ui/index.html
+   ```
 
-mvn spring-boot:run
-
-
-4. Acesse a API:
-
-http://localhost:8080/swagger-ui/index.html
 
 
