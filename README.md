@@ -1,6 +1,6 @@
 # IBMEC-MALL: E-commerce com Autorização de Cartão e Gestão de Produtos
 
-Projeto de e-commerce desenvolvido para a disciplina de Computação em Nuvem, com funcionalidades que incluem cadastro de usuários, produtos, endereços e gerenciamento de cartões de crédito com autorização de compras.
+Projeto de e-commerce desenvolvido para a disciplina de Big Data e Cloud Computing, com funcionalidades que incluem cadastro de usuários, produtos, endereços e gerenciamento de cartões de crédito com autorização de compras.
 
 ## Membros do Grupo
 - **Mateus Padilha**  
