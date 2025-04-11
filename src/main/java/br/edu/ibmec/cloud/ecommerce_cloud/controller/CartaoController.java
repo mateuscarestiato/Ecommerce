@@ -27,16 +27,11 @@ public class CartaoController {
 
     @PostMapping
     public ResponseEntity<Cartao> create(@PathVariable("id_user") int id_user, @RequestBody Cartao cartao) {
-        //Verificando se o usuario existe na base
         Optional<Usuario> optionalUsuario = this.usuarioRepository.findById(id_user);
-
         if (optionalUsuario.isEmpty())
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
-        //Cria o cartao de credito na base
         cartaoRepository.save(cartao);
-
-        //Associa o cartao de credito ao usuario
         Usuario usuario = optionalUsuario.get();
 
         usuario.getCartoes().add(cartao);
@@ -48,16 +43,12 @@ public class CartaoController {
 
     @PostMapping("/authorize")
     public ResponseEntity<TransacaoResponse> authorize(@PathVariable("id_user") int id_user, @RequestBody TransacaoRequest request) {
-        //Verificando se o usuario existe na base
         Optional<Usuario> optionalUsuario = this.usuarioRepository.findById(id_user);
-
         if (optionalUsuario.isEmpty())
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
         Usuario usuario = optionalUsuario.get();
         Cartao cartaoCompra = null;
-
-        //Busca os dados do cartao de credito;
         for (Cartao cartao: usuario.getCartoes()) {
             if (request.getNumero().equals(cartao.getNumero()) && request.getCvv().equals(cartao.getCvv())) {
                 cartaoCompra = cartao;
@@ -65,7 +56,6 @@ public class CartaoController {
             }
         }
 
-        //Não achei o cartao do usuario
         if (cartaoCompra == null) {
             TransacaoResponse response = new TransacaoResponse();
             response.setStatus("NOT_AUTHORIZED");
@@ -74,8 +64,6 @@ public class CartaoController {
             return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
         }
 
-
-        //Verifica se o cartao não está expirado
         if (cartaoCompra.getDtExpiracao().isBefore(LocalDateTime.now())) {
             TransacaoResponse response = new TransacaoResponse();
             response.setStatus("NOT_AUTHORIZED");
@@ -84,7 +72,6 @@ public class CartaoController {
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
         }
 
-        //Verifica se tem dinheiro no cartao para realizr a compra
         if (cartaoCompra.getSaldo() < request.getValor()) {
             TransacaoResponse response = new TransacaoResponse();
             response.setStatus("NOT_AUTHORIZED");
@@ -93,10 +80,7 @@ public class CartaoController {
             return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
         }
 
-        //Debita no cartao de credito o valor da compra
         cartaoCompra.setSaldo(cartaoCompra.getSaldo() - request.getValor());
-
-        //Atualiza o cartao na base de dados
         cartaoRepository.save(cartaoCompra);
 
         TransacaoResponse response = new TransacaoResponse();
@@ -109,5 +93,31 @@ public class CartaoController {
 
     }
 
+    // Novo endpoint para deletar um cartão
+    // A URL ficará: DELETE /credit_card/{id_user}/{card_id}
+    @DeleteMapping("/{card_id}")
+    public ResponseEntity<Void> delete(@PathVariable("id_user") int id_user, @PathVariable("card_id") int card_id) {
+        // Verifica se o usuário existe
+        Optional<Usuario> optionalUsuario = usuarioRepository.findById(id_user);
+        if (optionalUsuario.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        Usuario usuario = optionalUsuario.get();
+        Optional<Cartao> optionalCartao = usuario.getCartoes().stream()
+                .filter(cartao -> cartao.getId() == card_id)
+                .findFirst();
+
+        if (optionalCartao.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        Cartao cartaoToDelete = optionalCartao.get();
+        usuario.getCartoes().remove(cartaoToDelete);
+        usuarioRepository.save(usuario);
+
+        cartaoRepository.delete(cartaoToDelete);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 
 }
