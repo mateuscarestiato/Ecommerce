@@ -1,79 +1,108 @@
-# Ecommerce API Documentation
+# IBMEC-MALL: E-commerce com Autorização de Cartão e Gestão de Produtos
 
-Este documento descreve os endpoints disponíveis na API do projeto Ecommerce, incluindo exemplos de requisições para serem testados no Postman.
+Projeto de e-commerce desenvolvido para a disciplina de Big Data e Cloud Computing, com funcionalidades que incluem cadastro de usuários, produtos, endereços e gerenciamento de cartões de crédito com autorização de compras.
+
+## Membros do Grupo
+- **Mateus Padilha**  
+- **Ian Esteves**  
+- **Brenda Mendes**
+
+## Tecnologias Utilizadas
+- Java 21
+- Spring Boot 3
+- Banco NoSQL (CosmosDB)
+- Deploy em Azure App Service
+- Swagger UI para testes
 
 
-## **Cartão de Crédito (CartaoController)**
+## Principais Endpoints
 
-### **Criar Cartão de Crédito**
-- **Endpoint:** `POST /credit_card/{id_user}`
-- **Descrição:** Cria um cartão de crédito para o usuário especificado.
-- **Body (JSON):**
+### Usuários
+`POST /users` – Cadastro de novo usuário  
 ```json
 {
-  "numero": "1234567812345678",
-  "dtExpiracao": "2025-12-31T23:59:59",
+  "nome": "Mateus Padilha",
+  "email": "mateuspcdaniel@gmail.com",
+  "dtNascimento": "2025-04-11T02:37:46.136Z",
+  "cpf": "12345678900",
+  "telefone": "21997537491"
+}
+```
+
+---
+
+### Produtos
+`POST /products` – Cadastro de produto  
+```json
+{
+  "productCategory": "Videogames",
+  "productName": "PlayStation 5",
+  "price": 3000,
+  "imageUrl": [
+    "https://http2.mlstatic.com/D_NQ_NP_2X_970771-MLA73347645092_122023-F.webp"
+  ],
+  "productDescription": "Console Game"
+}
+```
+
+---
+
+### Cartão de Crédito
+`POST /credit_card/{id_user}` – Cadastro de cartão  
+```json
+{
+  "numero": "4000123456789010",
+  "dtExpiracao": "2027-04-11T03:02:45.999Z",
   "cvv": "123",
-  "saldo": 1000.00
+  "saldo": 5000
 }
 ```
 
-## **Endereço (EnderecoController)**
-
-### **Criar Endereço**
-- **Endpoint:** `POST /address/{id_user}`
-- **Descrição:** Cria um endereço para o usuário especificado.
-- **Body (JSON):**
+`POST /credit_card/{id_user}/authorize` – Autorização de valor  
 ```json
 {
-  "logradouro": "Rua Exemplo",
-  "complemento": "Apto 101",
-  "bairro": "Centro",
-  "cidade": "São Paulo",
-  "estado": "SP",
-  "cep": "01000-000"
+  "numero": "4000123456789010",
+  "dtExpiracao": "2027-04-11T03:09:43.421Z",
+  "cvv": "123",
+  "valor": 2000
 }
 ```
 
-## **Procuto (ProductController)**
+---
 
-### **Criar Produto**
-- **Endpoint:** `POST /products`
-- **Descrição:** Cria um novo produto.
-- **Body (JSON):**
+### Endereço
+`POST /address/{id_user}` – Cadastro de endereço  
 ```json
 {
-  "productCategory": "Eletrônicos",
-  "productName": "Smartphone",
-  "price": 1999.99,
-  "imageUrl": ["https://example.com/image1.jpg", "https://example.com/image2.jpg"],
-  "productDescription": "Um smartphone de última geração."
+  "logradouro": "Rua Monteiro Lobato 21",
+  "complemento": "701",
+  "bairro": "Laranjeiras",
+  "cidade": "Rio de Janeiro",
+  "estado": "Rio de Janeiro",
+  "cep": "22030-100"
 }
 ```
 
-## **Usuario (UsuarioController)**
+---
 
-### **Listar Todos os Usuários**
-- **Endpoint:** `GET /users`
-- **Descrição:** Retorna todos os usuários cadastrados.
-- **Resposta de Sucesso (HTTP 200):**
-```json
-[
-  {
-    "id": 1,
-    "nome": "João Silva",
-    "email": "joao.silva@example.com",
-    "dtNascimento": "1990-01-01T00:00:00",
-    "cpf": "12345678900",
-    "telefone": "11999999999"
-  },
-  {
-    "id": 2,
-    "nome": "Maria Oliveira",
-    "email": "maria.oliveira@example.com",
-    "dtNascimento": "1985-05-15T00:00:00",
-    "cpf": "98765432100",
-    "telefone": "21988888888"
-  }
-]
-```
+## Execução do Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/mateuscarestiato/Ecommerce.git
+   ```
+
+2. Configure o arquivo `application.properties` com os dados de conexão do banco.
+
+3. Execute o projeto com Maven:
+   ```bash
+   mvn spring-boot:run
+   ```
+
+4. Acesse a API através do Swagger UI:
+   ```
+   http://localhost:8081/swagger-ui/index.html
+   ```
+
+
+
