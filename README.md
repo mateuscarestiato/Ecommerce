@@ -8,9 +8,9 @@ Projeto de e-commerce desenvolvido para a disciplina de Computação em Nuvem, c
 - **Brenda Mendes**
 
 ## Tecnologias Utilizadas
-- Java 17
+- Java 21
 - Spring Boot 3
-- Banco NoSQL (CosmosDB / MongoDB)
+- Banco NoSQL (CosmosDB)
 - Deploy em Azure App Service
 - Swagger UI para testes
 
