@@ -35,11 +35,11 @@ public class Usuario {
     @Column
     private String telefone;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(referencedColumnName = "id", name = "id_usuario")
     private List<Cartao> cartoes;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(referencedColumnName = "id", name = "id_usuario")
     private List<Endereco> enderecos;
 
