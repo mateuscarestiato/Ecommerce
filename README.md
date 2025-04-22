@@ -115,5 +115,3 @@ O objetivo principal do IBMEC-MALL é desenvolver uma aplicação de e-commerce 
    http://localhost:8081/swagger-ui/index.html
    ```
 
-
-
